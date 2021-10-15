@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Dal.Abstract
 {
-    public interface IBoardTask:IEntityRepository<BoardTask>
+    public interface IBoardTaskDal:IEntityRepository<BoardTask>
     {
     }
 }
