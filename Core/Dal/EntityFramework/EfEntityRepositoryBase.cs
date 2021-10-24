@@ -26,6 +26,7 @@ namespace Core.Dal.EntityFramework
 
         public void Delete(TEntity entity)
         {
+
             try
             {
                 using (TContext context = new TContext())
@@ -34,13 +35,14 @@ namespace Core.Dal.EntityFramework
                     deletedEntity.State = EntityState.Deleted;
                     context.SaveChanges();
                 }
+
             }
-            catch (Exception exc)
+            catch (Exception e)
             {
 
-                throw exc;
+                throw e;
             }
-           
+
         }
 
         public TEntity Get(Expression<Func<TEntity, bool>> filter)
